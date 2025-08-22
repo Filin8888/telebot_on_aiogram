@@ -8,10 +8,10 @@ import os
 from aiogram.fsm.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.storage.memory import MemoryStorage
-from dotenv import load_dotenv 
-load_dotenv()
+from dotenv import load_dotenv
 
 
+load_dotenv("/etc/secrets/.env")
 TOKEN = os.getenv("TOKEN")#"8250251901:AAGlvgMXLOya2m_RUAHdUtMjVeXky0CI9v0"
 if not TOKEN:
     raise RuntimeError("BOT_TOKEN is not set")
